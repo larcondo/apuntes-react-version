@@ -1,5 +1,6 @@
 import './index.css'
 import { useState } from 'react'
+import { MdFormatListBulleted } from 'react-icons/md'
 
 import { topics } from './topics'
 
@@ -10,30 +11,47 @@ import Arrays from './Arrays'
 
 const Go = () => {
   const [subpage, setSubpage] = useState('Slices')
+  const [topicsVisible, setTopicsVisible] = useState(false)
 
-  const changeTopic = (e) => setSubpage(e.target.innerText)
+  const changeTopic = (e) => {
+    setSubpage(e.target.innerText)
+    setTopicsVisible(false)
+  }
+
+  const showTopics = () => setTopicsVisible(true)
 
   return(
     <PageContainer>
       <div>
         <Title type='h1'>Go (Golang)</Title>
-        <div className='go-topics-container'>
-          { topics.map( t => {
-            return <button
-              key={t.title}
-              disabled={t.status === null}
-              className='go-topic'
-              onClick={changeTopic}>
-                { t.title }
-              </button>
-          })}
-        </div>
+        <button onClick={showTopics}>
+          <MdFormatListBulleted size={20} className='topics-icon' />  Topics
+        </button>
+        { topicsVisible && <GoTopics topics={topics} onClick={changeTopic} />
+        }
         
         { subpage === 'Slices' && <Slices /> }
         { subpage === 'Arrays' && <Arrays /> }
         
       </div>
     </PageContainer>
+  )
+}
+
+const GoTopics = ({ topics, onClick }) => {
+  return(
+    <div className='go-topics-container'>
+      <h1>Topicos disponibles</h1>
+      { topics.map( t => {
+        return <button
+          key={t.title}
+          disabled={t.status === null}
+          className='go-topic'
+          onClick={onClick}>
+            { t.title }
+          </button>
+      })}
+    </div>
   )
 }
 

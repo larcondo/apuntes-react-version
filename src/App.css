@@ -10,18 +10,24 @@
   color: #888;
 }
 
+main h1 {
+  font-size: 2em;
+  line-height: 42px;
+}
+
 main {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 20% 80%;
   width: 98vw;
   box-sizing: border-box;
-  /* width: 1000px; */
-  /* background-color: blue; */
 }
 
-main > div:nth-child(1) {
-  /* background-color: orange; */
+.mobile-menu {
+  display: none;
+}
+
+main nav {
   padding: 3em 2em;
   display: flex;
   flex-direction: column;
@@ -38,4 +44,46 @@ section {
   background-color: rgba(255,255,255,0.15);
   padding: 4px;
   border-radius: 4px;
+}
+
+@media screen and (width < 768px) {
+  main {
+    grid-template-rows: 4em auto;
+    grid-template-columns: 100%;
+  }
+
+  .content {
+    padding: 0 1em;
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 0;
+    position: sticky;
+    top: 0;
+    background-color: #242424;
+  }
+
+  .mobile-menu .menu-icon {
+    vertical-align: text-bottom;
+  }
+
+  .mobile-menu .links {
+    display: flex;
+    flex-direction: column;
+    background-color: #222222;
+    position: absolute;
+    top: 4em;
+    min-height: 100lvh;
+    width: 60%;
+    gap: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  main nav {
+    display: none;
+  }
 }

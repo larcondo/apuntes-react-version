@@ -19,3 +19,9 @@
 .section-links > nav a.active {
   color: limegreen;
 }
+
+@media screen and (width < 768px) {
+  .section-links {
+    display: none;
+  }
+}

@@ -1,8 +1,27 @@
-# React + Vite
+# Apuntes (React Version)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Dependencias
 
-Currently, two official plugins are available:
+- react / react-dom
+- react-icons
+- react-syntax-highlighter
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Scripts
+
+### Modo Desarrollo
+
+Iniciar la web app en modo desarrollo:
+
+```
+npm run dev
+```
+
+### Modo Producción
+
+Crear una versión de producción con Vite:
+
+```
+npm run build
+```
+
+Los archivos generados se encontrarán en la carpeta `build`.
