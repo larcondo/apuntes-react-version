@@ -9,12 +9,20 @@ const CodeBlock = ({ codeString, language }) => {
     margin: 0,
   }
 
+  const lines = (String(codeString).match(/\n/g) || '').length + 1
+
+  const lineNumberStyle = {
+    minWidth: lines > 9 ? '3ch' : '2ch',
+    color: '#606060',
+  }
+
   return(
     <SyntaxHighlighter
       language={language}
       style={vs2015}
       showLineNumbers
       customStyle={customStyle}
+      lineNumberStyle={lineNumberStyle}
     >
       { codeString }
     </SyntaxHighlighter>

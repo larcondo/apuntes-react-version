@@ -8,6 +8,7 @@ import Title from '../../components/Title'
 import PageContainer from '../../components/PageContainer'
 import Slices from './Slices'
 import Arrays from './Arrays'
+import Maps from './Maps'
 
 const Go = () => {
   const [subpage, setSubpage] = useState('Slices')
@@ -32,6 +33,7 @@ const Go = () => {
         
         { subpage === 'Slices' && <Slices /> }
         { subpage === 'Arrays' && <Arrays /> }
+        { subpage === 'Maps' && <Maps /> }
         
       </div>
     </PageContainer>
