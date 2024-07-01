@@ -1,0 +1,21 @@
+.section-links {
+  padding: 3em 2em;
+}
+
+.section-links > nav {
+  position: sticky;
+  top: 3em;
+}
+
+.section-links > nav li {
+  list-style-type: none;
+}
+
+.section-links > nav a {
+  text-decoration: none;
+  color: #888888;
+}
+
+.section-links > nav a.active {
+  color: limegreen;
+}

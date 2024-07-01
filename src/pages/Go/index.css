@@ -1,0 +1,13 @@
+.go-topics-container {
+  display: flex;
+  /* width: 100%; */
+  /* overflow-x: scroll; */
+  flex-flow: row wrap;
+  gap: 1ch;
+}
+
+.go-topic {
+  padding: 10px;
+  border: 1px solid #454545;
+  border-radius: 10px;
+}
