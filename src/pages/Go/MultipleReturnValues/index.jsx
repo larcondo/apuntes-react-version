@@ -4,7 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
-
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const MultipleReturnValues = () => {
   return(
@@ -25,8 +25,9 @@ const MultipleReturnValues = () => {
 
         <Paragraph>Aceptar un número variable de argumentos o parámetros es otra buena característica de las funciones en Go. Dichas funciones se denominan Variádicas (<code>variadic functions</code>).</Paragraph>
 
-        <Title type='h3'>Código completo</Title>
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <p>Fuente: <a href="https://gobyexample.com/multiple-return-values" target='_blank'>gobyexample.com/multiple-return-values</a></p>
       </section>

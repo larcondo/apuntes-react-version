@@ -4,6 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const Maps = () => {
   return(
@@ -47,8 +48,9 @@ const Maps = () => {
         
         <Paragraph>Por último, tener en cuenta que los maps aparecerán en la forma <code>map[k:v k:v]</code> cuando los imprimimos con <code>fmt.Println</code>.</Paragraph>
 
-        <Title type='h3'>Código completo</Title>
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <Paragraph>Fuente: <a href="https://gobyexample.com/maps" target='_blank'>gobyexample.com/maps</a></Paragraph>
       </section>

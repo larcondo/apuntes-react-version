@@ -4,6 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const Functions = () => {
   return(
@@ -21,8 +22,9 @@ const Functions = () => {
         <Paragraph>La llamada a la función se realiza con la típica sintaxis <code>name(args)</code>:</Paragraph>
         <GoCode codeString={codes.functions3} />
 
-        <Title type='h3'>Código completo</Title>
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <Paragraph>Fuente: <a href="https://gobyexample.com/functions" target='_blank'>gobyexample.com/functions</a></Paragraph>
       </section>

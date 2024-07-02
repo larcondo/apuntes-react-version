@@ -4,6 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const Arrays = () => {
   return(
@@ -38,8 +39,9 @@ const Arrays = () => {
         
         <Paragraph>Cuando imprimimos con <code>fmt.Println</code> un array aparecerá en la forma <code>[v1 v2 v3 ...]</code>.</Paragraph>
 
-        <Title type='h3'>Código completo</Title>
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <p>Fuente: <a href="https://gobyexample.com/arrays" target='_blank'>gobyexample.com/arrays</a></p>
 

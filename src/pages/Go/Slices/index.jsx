@@ -4,6 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const Slices = () => {
   return(
@@ -52,9 +53,9 @@ const Slices = () => {
         <Paragraph>Notar que si bien los slices son tipos diferentes a los arrays, se muestran de igual forma por <code>fmt.Println</code>.</Paragraph>
         <Paragraph>Ver <a href="https://go.dev/blog/slices-intro" target="_blank">este post</a> del team Go para más detalles del diseño e implementación de slices en Go.</Paragraph>
 
-        <Title type='h3'>Código completo</Title>
-
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <Paragraph>Fuente: <a href="https://gobyexample.com/slices" target='_blank'>gobyexample.com/slices</a></Paragraph>
       </section>

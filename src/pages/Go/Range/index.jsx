@@ -4,6 +4,7 @@ import codeComplete from './codeStringsComplete'
 import Title from '@components/Title'
 import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
+import CodeCompleteDetails from '@components/CodeCompleteDetails'
 
 const Range = () => {
   return(
@@ -27,8 +28,9 @@ const Range = () => {
         <Paragraph>Cuando usamos <code>range</code> en strings se itera sobre puntos Unicode. El primer valor es el byte índice de la <code>runa (rune)</code> y el segundo es la <code>runa</code> en sí. Para más detalles, ver <a href="https://gobyexample.com/strings-and-runes" target='_blank'>Strings and Runes</a>.</Paragraph>
         <GoCode codeString={codes.ranges5} />
 
-        <Title type='h3'>Código completo</Title>
-        <GoCode codeString={codeComplete} />
+        <CodeCompleteDetails>
+          <GoCode codeString={codeComplete} />
+        </CodeCompleteDetails>
 
         <Paragraph>Fuente: <a href="https://gobyexample.com/range" target='_blank'>gobyexample.com/range</a></Paragraph>
       </section>

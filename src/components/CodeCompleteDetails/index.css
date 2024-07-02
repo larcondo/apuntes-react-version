@@ -1,0 +1,22 @@
+details {
+  background-color: #323232;
+  border-radius: 10px;
+}
+
+summary {
+  color: #d3d3d3;
+  background-color: #323232;
+  padding: 1ch 2ch;
+  margin-top: 1em;
+  border-radius: 6px;
+  font-size: .9em;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+
+
+@media screen and (width > 768px) {
+  summary:hover {
+    background-color: #383838;
+  }
+}
