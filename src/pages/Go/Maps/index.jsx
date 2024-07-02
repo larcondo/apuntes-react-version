@@ -9,7 +9,7 @@ const Maps = () => {
   return(
     <div>
       <section id='section-1'>
-        <Title type={'h2'}>Maps</Title>
+        <Title type='h2'>Maps</Title>
         <Paragraph>Los <i>Maps</i> son los <u>tipos de datos asociativos</u> de Go (a veces llamados <i>hashes</i> o <i>dicts</i> en otros lenguajes).</Paragraph>
 
         <Paragraph>Para crear un map vacío utilizamos la función integrada <code>make</code>: <code className='resaltado'>make(map[key-type]val-type)</code>.</Paragraph>

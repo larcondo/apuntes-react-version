@@ -9,6 +9,9 @@ import PageContainer from '@components/PageContainer'
 import Slices from './Slices'
 import Arrays from './Arrays'
 import Maps from './Maps'
+import Range from './Range'
+import Functions from './Functions'
+import MultipleReturnValues from './MultipleReturnValues'
 
 const Go = () => {
   const [subpage, setSubpage] = useState('Slices')
@@ -28,12 +31,14 @@ const Go = () => {
         <button onClick={showTopics}>
           <MdFormatListBulleted size={20} className='topics-icon' />  Topics
         </button>
-        { topicsVisible && <GoTopics topics={topics} onClick={changeTopic} />
-        }
+        { topicsVisible && <GoTopics topics={topics} onClick={changeTopic} /> }
         
         { subpage === 'Slices' && <Slices /> }
         { subpage === 'Arrays' && <Arrays /> }
         { subpage === 'Maps' && <Maps /> }
+        { subpage === 'Range' && <Range /> }
+        { subpage === 'Functions' && <Functions /> }
+        { subpage === 'Multiple Return Values' && <MultipleReturnValues /> }
         
       </div>
     </PageContainer>
@@ -43,7 +48,7 @@ const Go = () => {
 const GoTopics = ({ topics, onClick }) => {
   return(
     <div className='go-topics-container'>
-      <h1>Topicos disponibles</h1>
+      <h1>Tópicos disponibles</h1>
       { topics.map( t => {
         return <button
           key={t.title}
