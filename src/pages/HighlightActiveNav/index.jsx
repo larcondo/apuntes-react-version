@@ -1,9 +1,9 @@
 import codeStrings from './codeStrings'
 
-import PageContainer from '../../components/PageContainer'
-import Title from '../../components/Title'
-import CodeBlock from '../../components/CodeBlock'
-import HighlightedNav from '../../components/HighlightedNav'
+import PageContainer from '@components/PageContainer'
+import Title from '@components/Title'
+import CodeBlock from '@components/CodeBlock'
+import HighlightedNav from '@components/HighlightedNav'
 
 const links = [
   { id: 'section-1', text: 'HTML code' },

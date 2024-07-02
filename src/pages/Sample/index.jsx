@@ -1,8 +1,8 @@
-import Title from '../../components/Title'
-import CodeBlock from '../../components/CodeBlock'
-import Paragraph from '../../components/Paragraph'
-import HighlightedNav from '../../components/HighlightedNav'
-import PageContainer from '../../components/PageContainer'
+import Title from '@components/Title'
+import CodeBlock from '@components/CodeBlock'
+import Paragraph from '@components/Paragraph'
+import HighlightedNav from '@components/HighlightedNav'
+import PageContainer from '@components/PageContainer'
 
 const links = [
   { id: 'section-1', text: 'Section 1' },

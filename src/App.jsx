@@ -2,11 +2,11 @@ import './App.css'
 import { useState } from 'react'
 import { MdMenu } from 'react-icons/md'
 
-import Sample from './pages/Sample'
-import FetchUse from './pages/FetchUse'
-import HighlightActiveNav from './pages/HighlightActiveNav'
-import MongoDB from './pages/MongoDB'
-import Go from './pages/Go'
+import Sample from '@pages/Sample'
+import FetchUse from '@pages/FetchUse'
+import HighlightActiveNav from '@pages/HighlightActiveNav'
+import MongoDB from '@pages/MongoDB'
+import Go from '@pages/Go'
 
 function App() {
   const [page, setPage] = useState('Sample')

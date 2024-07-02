@@ -1,8 +1,8 @@
 import codes from './codeStrings'
 import codeComplete from './codeStringsComplete'
 
-import Title from '../../../components/Title'
-import Paragraph from '../../../components/Paragraph'
+import Title from '@components/Title'
+import Paragraph from '@components/Paragraph'
 import GoCode from '../GoCode'
 
 const Maps = () => {

@@ -1,9 +1,9 @@
-import PageContainer from "../../components/PageContainer"
-import Title from "../../components/Title"
-import Paragraph from "../../components/Paragraph"
-import HighlightedNav from "../../components/HighlightedNav"
-import CodeBlock from "../../components/CodeBlock"
-import codeStrings from "./codeStrings"
+import PageContainer from '@components/PageContainer'
+import Title from '@components/Title'
+import Paragraph from '@components/Paragraph'
+import HighlightedNav from '@components/HighlightedNav'
+import CodeBlock from '@components/CodeBlock'
+import codeStrings from './codeStrings'
 
 const links = [
   { id: 'section-1', text: 'Crear usuario'},

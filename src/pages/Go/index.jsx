@@ -4,8 +4,8 @@ import { MdFormatListBulleted } from 'react-icons/md'
 
 import { topics } from './topics'
 
-import Title from '../../components/Title'
-import PageContainer from '../../components/PageContainer'
+import Title from '@components/Title'
+import PageContainer from '@components/PageContainer'
 import Slices from './Slices'
 import Arrays from './Arrays'
 import Maps from './Maps'
