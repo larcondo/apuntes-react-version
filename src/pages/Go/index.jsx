@@ -12,6 +12,10 @@ import Maps from './Maps'
 import Range from './Range'
 import Functions from './Functions'
 import MultipleReturnValues from './MultipleReturnValues'
+import VariadicFunctions from './VariadicFunctions'
+import Closures from './Closures'
+import Recursion from './Recursion'
+import Pointers from './Pointers'
 
 const Go = () => {
   const [subpage, setSubpage] = useState('Slices')
@@ -39,6 +43,10 @@ const Go = () => {
         { subpage === 'Range' && <Range /> }
         { subpage === 'Functions' && <Functions /> }
         { subpage === 'Multiple Return Values' && <MultipleReturnValues /> }
+        { subpage === 'Variadic Functions' && <VariadicFunctions />}
+        { subpage === 'Closures' && <Closures />}
+        { subpage === 'Recursion' && <Recursion />}
+        { subpage === 'Pointers' && <Pointers />}
         
       </div>
     </PageContainer>

@@ -11,9 +11,9 @@ export const topics = [
   { title: 'Range', status: 'ok' },
   { title: 'Functions', status: 'ok' },
   { title: 'Multiple Return Values', status: 'ok' },
-  { title: 'Variadic Functions', status: null },
-  { title: 'Closures', status: null },
-  { title: 'Recursion', status: null },
-  { title: 'Pointers', status: null },
+  { title: 'Variadic Functions', status: 'ok' },
+  { title: 'Closures', status: 'ok' },
+  { title: 'Recursion', status: 'ok' },
+  { title: 'Pointers', status: 'ok' },
   // { title: '', status: null },
 ]
