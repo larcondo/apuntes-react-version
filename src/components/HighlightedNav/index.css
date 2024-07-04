@@ -5,6 +5,12 @@
 .section-links > nav {
   position: sticky;
   top: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+.section-links > nav ul {
+  padding: 0;
 }
 
 .section-links > nav li {

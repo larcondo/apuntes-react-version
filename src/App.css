@@ -34,6 +34,26 @@ main nav {
   gap: 1em;
 }
 
+main .topic-link {
+  background-color: #2a2a2a;
+  padding: 0.6em 1.2em;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: inherit;
+  transition: border-color 0.25s;
+}
+
+main .topic-link:hover {
+  border-color: #646cff;
+  color: inherit;
+}
+
+main .topic-link.active {
+  background-color: #1a1a1a;
+}
+
 section {
   margin: 0;
   padding: 0;
