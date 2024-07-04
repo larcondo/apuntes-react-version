@@ -1,0 +1,9 @@
+.menu-button {
+  display: initial;
+}
+
+@media screen and (width > 768px) {
+  .menu-button {
+    display: none;
+  }
+}

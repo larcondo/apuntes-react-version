@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      { path: '/sample', element: <Sample />, },
+      { path: '/', element: <Sample />, index: true },
       { path: '/fetchuse', element: <FetchUse />, },
       { path: '/highlight-active-nav', element: <HighlightActiveNav />, },
       { path: '/mongodb', element: <MongoDB />, },
