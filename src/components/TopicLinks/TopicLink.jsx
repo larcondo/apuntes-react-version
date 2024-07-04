@@ -1,12 +1,14 @@
 import { useLocation, Link } from 'react-router-dom'
 
-const TopicLink = ({ path, text, onClick }) => {
+const TopicLink = ({ path, text, onClick, hasSubRoutes = false }) => {
   const { pathname } = useLocation()
+
+  const isActive = hasSubRoutes ? pathname.startsWith(path) : pathname === path
 
   return (
     <Link to={path}
       onClick={onClick}
-      className={ pathname === path ? 'topic-link active' : 'topic-link' }
+      className={ isActive ? 'topic-link active' : 'topic-link' }
     >
       { text }
     </Link>

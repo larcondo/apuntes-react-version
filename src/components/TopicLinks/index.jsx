@@ -8,7 +8,7 @@ const TopicLinks = ({ onClick, ...props }) => {
       <TopicLink path='/fetchuse' text='FetchUse' onClick={onClick} />
       <TopicLink path='/highlight-active-nav' text='Highlight Active Nav' onClick={onClick} />
       <TopicLink path='/mongodb' text='Mongo DB' onClick={onClick} />
-      <TopicLink path='/go' text='Go' onClick={onClick} />
+      <TopicLink path='/go' text='Go' onClick={onClick} hasSubRoutes />
     </div>
   )
 }

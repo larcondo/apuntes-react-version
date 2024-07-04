@@ -1,0 +1,37 @@
+.home-sections-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 46%);
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-content: center;
+  align-content: center;
+  padding: 1em 0;
+}
+
+.home-sections-container a {
+  padding: 1em;
+  color: #e3e3e3;
+  background-color: #2b2b2b;
+  
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+
+.home-sections-container > a:hover {
+  color: initial;
+  border-color: #646cff;
+}
+
+@media screen and (width > 768px) {
+  .home-sections-container {
+    grid-template-columns: repeat(4, 23%);
+    column-gap: 2%;
+  }  
+}

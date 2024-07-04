@@ -7,6 +7,8 @@ import HighlightActiveNav from '@pages/HighlightActiveNav'
 import MongoDB from '@pages/MongoDB'
 import Go from '@pages/Go'
 
+import { goRoutes } from '@pages/Go/routes'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -16,8 +18,13 @@ const router = createBrowserRouter([
       { path: '/fetchuse', element: <FetchUse />, },
       { path: '/highlight-active-nav', element: <HighlightActiveNav />, },
       { path: '/mongodb', element: <MongoDB />, },
-      { path: '/go', element: <Go />, },
+      {
+        path: '/go',
+        element: <Go />,
+        children: goRoutes,
+      },
     ],
+    errorElement: <div>404 Not Found</div>,
   }
 ])
 

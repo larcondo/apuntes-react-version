@@ -1,52 +1,32 @@
 import './index.css'
 import { useState } from 'react'
 import { MdFormatListBulleted } from 'react-icons/md'
-
+import { Outlet, Link } from 'react-router-dom'
 import { topics } from './topics'
 
 import Title from '@components/Title'
 import PageContainer from '@components/PageContainer'
-import Slices from './Slices'
-import Arrays from './Arrays'
-import Maps from './Maps'
-import Range from './Range'
-import Functions from './Functions'
-import MultipleReturnValues from './MultipleReturnValues'
-import VariadicFunctions from './VariadicFunctions'
-import Closures from './Closures'
-import Recursion from './Recursion'
-import Pointers from './Pointers'
 
 const Go = () => {
-  const [subpage, setSubpage] = useState('Slices')
   const [topicsVisible, setTopicsVisible] = useState(false)
 
-  const changeTopic = (e) => {
-    setSubpage(e.target.innerText)
+  const changeTopic = () => {
+    // setSubpage(e.target.innerText)
     setTopicsVisible(false)
   }
 
-  const showTopics = () => setTopicsVisible(true)
+  const toggleTopics = () => setTopicsVisible(!topicsVisible)
 
   return(
     <PageContainer>
       <div>
         <Title type='h1'>Go (Golang)</Title>
-        <button onClick={showTopics}>
+        <button onClick={toggleTopics}>
           <MdFormatListBulleted size={20} className='topics-icon' />  Topics
         </button>
         { topicsVisible && <GoTopics topics={topics} onClick={changeTopic} /> }
         
-        { subpage === 'Slices' && <Slices /> }
-        { subpage === 'Arrays' && <Arrays /> }
-        { subpage === 'Maps' && <Maps /> }
-        { subpage === 'Range' && <Range /> }
-        { subpage === 'Functions' && <Functions /> }
-        { subpage === 'Multiple Return Values' && <MultipleReturnValues /> }
-        { subpage === 'Variadic Functions' && <VariadicFunctions />}
-        { subpage === 'Closures' && <Closures />}
-        { subpage === 'Recursion' && <Recursion />}
-        { subpage === 'Pointers' && <Pointers />}
+        <Outlet />
         
       </div>
     </PageContainer>
@@ -56,15 +36,16 @@ const Go = () => {
 const GoTopics = ({ topics, onClick }) => {
   return(
     <div className='go-topics-container'>
-      <h1>Tópicos disponibles</h1>
+      <Title type='h2'>Tópicos disponibles</Title>
       { topics.map( t => {
-        return <button
-          key={t.title}
-          disabled={t.status === null}
-          className='go-topic'
-          onClick={onClick}>
-            { t.title }
-          </button>
+        return(
+          <Link to={t.path}
+            key={t.title}
+            onClick={onClick}
+          >
+              {t.title}
+          </Link>
+        )
       })}
     </div>
   )
